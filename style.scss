@@ -93,7 +93,8 @@ body {
 .item {
   padding: 7px 0;
   width: 367px;
-
+  display: flex;
+  align-items: center;
 
 
   & span {
@@ -101,16 +102,42 @@ body {
     text-decoration-line: underline;
   }
 
-  &--extension span{
+  &--extension span {
     color: #995BB6;
   }
 
-  &--agile span{
+  &--agile span {
     color: #50A63A;
   }
 
-  &--app span{
+  &--app span {
     color: #F18B41;
   }
 
+}
+
+.item::before {
+  content: "•";
+  font-size: 16px;
+  padding: 0 7px 0 2px;
+
+}
+
+.item--extension::before {
+  color: #995BB6;
+}
+
+.item--agile::before {
+  color: #50A63A;
+}
+
+.item--app::before {
+  color: #F18B41;
+}
+
+.item--extension:nth-child(1)::before,
+.item--extension:nth-child(2)::before {
+  content: url(assets/star.svg);
+  padding-right: 3px;
+  padding-left: 0;
 }
