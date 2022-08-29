@@ -7,4 +7,96 @@
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 760px;
+  height: 760px;
+}
+
+.graphic-container {
+  width: 720px;
+  height: 750px;
+  background: url("./assets/frame.svg") no-repeat;
+}
+
+.circle {
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+.circle--type {
+  background-color: #3BA3F0;
+  position: absolute;
+  width: 154px;
+  height: 154px;
+  left: 20px;
+  top: 307px;
+}
+.circle--extension {
+  background-color: #995BB6;
+  position: absolute;
+  left: 255px;
+  top: 145px;
+}
+.circle--agile {
+  background-color: #50A63A;
+  position: absolute;
+  left: 254px;
+  top: 457px;
+}
+.circle--app {
+  background-color: #F18B41;
+  position: absolute;
+  left: 254px;
+  top: 641px;
+}
+
+.list {
+  position: absolute;
+  list-style: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+}
+.list--extension {
+  left: 390px;
+  top: 30px;
+}
+.list--agile {
+  left: 390px;
+  top: 412px;
+}
+.list--app {
+  left: 388px;
+  top: 651px;
+}
+
+.item {
+  padding: 7px 0;
+  width: 367px;
+}
+.item span {
+  cursor: pointer;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.item--extension span {
+  color: #995BB6;
+}
+.item--agile span {
+  color: #50A63A;
+}
+.item--app span {
+  color: #F18B41;
 }/*# sourceMappingURL=style.css.map */
