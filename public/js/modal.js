@@ -3,7 +3,6 @@ const modal = document.getElementById('modal');
 const btnModalClose = document.getElementById('modal-close');
 const items = document.querySelectorAll('li');
 
-
 async function showModal(e) {
   e.preventDefault();
 
@@ -25,11 +24,10 @@ async function showModal(e) {
   try {
     const response = await fetch(`/confluence/${id}`);
     const res = await response.json();
-    console.log('...',response)
+    console.log('...', response);
     if (res.error) {
       const div = document.createElement('div');
       div.innerHTML = res.error;
-      // modal.classList.add('modal--show');
       modal.prepend(div);
       modal.classList.add('modal--show');
 
@@ -52,6 +50,9 @@ async function showModal(e) {
     modal.prepend(div);
   } catch (e) {
     console.error('Error: ', e);
+    const div = document.createElement('div');
+    div.innerHTML = e.message;
+    modal.prepend(div);
   }
 
   modal.classList.add('modal--show');
@@ -72,4 +73,3 @@ function closeModal(event) {
 listWrapper.addEventListener('click', showModal);
 document.addEventListener('keydown', closeModal);
 btnModalClose.addEventListener('click', closeModal);
-
