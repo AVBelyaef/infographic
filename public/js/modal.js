@@ -24,7 +24,7 @@ async function showModal(e) {
   try {
     const response = await fetch(`/confluence/${id}`);
     const res = await response.json();
-    console.log('...', response);
+
     if (res.error) {
       const div = document.createElement('div');
       div.innerHTML = res.error;
