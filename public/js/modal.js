@@ -41,7 +41,7 @@ async function showModal(e) {
       'target="_blank" href'
     );
     const bodyWithTargetBlankAndAbsolutUrl = bodyWithTargetBlank.replaceAll(
-      /(\/[\w?=&.\/-;#~%-]+)"/gi,
+      /(\/[\w?=&.\/-;#~%-\+]+)"/gi,
       'https://sibedge.atlassian.net$&'
     )
 
