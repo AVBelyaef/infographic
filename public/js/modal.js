@@ -40,10 +40,14 @@ async function showModal(e) {
       'href',
       'target="_blank" href'
     );
+    const bodyWithTargetBlankAndAbsolutUrl = bodyWithTargetBlank.replaceAll(
+      /(\/[\w?=&.\/-;#~%-]+)"/gi,
+      'https://sibedge.atlassian.net$&'
+    )
 
     h1.className = 'modal__title';
     h1.innerText = res.title;
-    div.innerHTML = bodyWithTargetBlank;
+    div.innerHTML = bodyWithTargetBlankAndAbsolutUrl;
 
     div.prepend(h1);
 
